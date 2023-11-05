@@ -31,7 +31,7 @@
     },
     "publicIpName": {
       "type": "string",
-      "defaultValue": "VM-PublicIP",
+      "defaultValue": "Viki-PublicIP",
       "metadata": {
         "description": "Name for the Public IP used to access the Virtual Machine."
       }
@@ -106,7 +106,7 @@
     },
     "vmName": {
       "type": "string",
-      "defaultValue": "Name-VM",
+      "defaultValue": "Viki-VM",
       "metadata": {
         "description": "Name of the virtual machine."
       }
@@ -125,12 +125,12 @@
   },
   "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
-    "nicName": "myVMNic",
-    "addressPrefix": "10.0.0.0/16",
+    "nicName": "VikiVMNic",
+    "addressPrefix": "10.200.0.0/16",
     "subnetName": "Subnet",
-    "subnetPrefix": "10.0.0.0/24",
-    "virtualNetworkName": "Name-VNET",
-    "networkSecurityGroupName": "Name-NSG",
+    "subnetPrefix": "10.200.0.0/24",
+    "virtualNetworkName": "Viki-VNET",
+    "networkSecurityGroupName": "Viki-NSG",
     "securityProfileJson": {
       "uefiSettings": {
         "secureBootEnabled": true,
